@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="apRootContainer" minHeight="-Infinity" minWidth="1282.0" prefHeight="768.0" styleClass="root" stylesheets="@../../../../../assets/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ssc.reup.api.Controller.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="paneLogin" prefHeight="768.0" prefWidth="1366.0">
+         <children>
+            <AnchorPane fx:id="apInitAppViewContainer" prefHeight="770.0" prefWidth="1373.0" styleClass="mainPane" stylesheets="@../../../../../assets/Styles.css">
+               <children>
+                  <ImageView fx:id="imgLogin" fitHeight="770.0" fitWidth="432.0" layoutX="941.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../assets/login_bg.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="leftLoginPane" prefHeight="770.0" prefWidth="941.0" styleClass="leftLoginPane" stylesheets="@../../../../../assets/Styles.css">
+                     <children>
+                        <Label layoutX="148.0" layoutY="148.0" prefHeight="219.0" prefWidth="347.0" styleClass="labelAppName" text="SSC TIKTOK" />
+                        <Button fx:id="btnCloseAfter" layoutX="1.0" layoutY="729.0" mnemonicParsing="false" prefWidth="75.0" styleClass="topBarButton">
+                           <graphic>
+                              <FontAwesomeIcon fill="#eed7bd" size="1.5em" text="" />
+                           </graphic>
+                        </Button>
+                        <JFXButton fx:id="btGoToSimple" contentDisplay="CENTER" prefHeight="45.0" prefWidth="155.0" styleClass="btnLinkReg" text="Simplesolution.co" />
+                        <Label layoutX="155.0" layoutY="379.0" prefHeight="17.0" prefWidth="528.0" styleClass="labelAppDescription" text="Download và check bản quyền tiktok video" />
+                     </children>
+                     <effect>
+                        <DropShadow color="#747d8c" height="59.85" offsetY="-10.0" radius="29.35" width="59.55" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="apLogin" layoutX="968.0" layoutY="25.0" prefHeight="233.0" prefWidth="382.0" styleClass="loginFormRoot">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#57606f" height="64.74" radius="30.572499999999998" width="59.55" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneContentContainer" prefHeight="768.0" prefWidth="1366.0" styleClass="mainPane">
+               <children>
+                <AnchorPane layoutX="60.0" layoutY="114.0" minHeight="0.0" minWidth="0.0" prefHeight="651.0" prefWidth="1306.0" styleClass="mainPane">
+                     <children>
+                        <TabPane fx:id="tabContentContainer" layoutY="-28.0" prefHeight="683.0" prefWidth="1306.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Videos">
+                              <content>
+                                <AnchorPane fx:id="apVideoCloneContainer" minHeight="0.0" minWidth="0.0" prefHeight="574.0" prefWidth="1334.0">
+                                       <children>
+                                          <TableView fx:id="tvVideos" layoutX="10.0" layoutY="140.0" prefHeight="507.0" prefWidth="1290.0" styleClass="table-view-material" />
+                                          <TextField fx:id="txtVideoSearch" layoutX="1017.0" layoutY="102.0" prefHeight="35.0" prefWidth="283.0" promptText="Nhập video cần tìm ..." style="-fx-alignment: CENTER_RIGHT;" styleClass="txtInputSecondary" />
+                                          <TabPane fx:id="tpVideoActionTab" layoutX="11.0" layoutY="-19.0" prefHeight="116.0" prefWidth="1286.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab text="DownloadTab">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1286.0">
+                                                         <children>
+                                                            <Button fx:id="btReLoatDataDownload" layoutX="1233.0" layoutY="5.0" minWidth="30.0" mnemonicParsing="false" prefHeight="26.0" styleClass="btnCircle" visible="false">
+                                                               <graphic>
+                                                                  <FontAwesomeIcon fill="#e48447" size="1.2em" text="" />
+                                                               </graphic>
+                                                            </Button>
+                                                            <AnchorPane fx:id="apDownloadF" layoutX="2.0" layoutY="2.0" prefHeight="81.0" prefWidth="1281.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab text="ReplaceTab">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="root-group">
+                                                         <children>
+                                                            <Label layoutX="17.0" layoutY="-4.0" styleClass="labelFor" text="Thư mục chứa nhạc thay thế" />
+                                                            <TextField fx:id="textMusicFolderReplace" layoutX="15.0" layoutY="29.0" prefHeight="35.0" prefWidth="636.0" promptText="Nhấp chọn thư mục chứa nhạc thay thế" styleClass="txtInput" />
+                                                            <Label layoutX="671.0" layoutY="-4.0" styleClass="labelFor" text="Số luồng render" />
+                                                            <JFXComboBox fx:id="cbThreadReplace" layoutX="671.0" layoutY="31.0" prefHeight="25.0" prefWidth="183.0" />
+                                                            <Button fx:id="btReplaceMusicVideo" layoutX="868.0" layoutY="31.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="166.0" styleClass="btnPrimary" text="Thay thế nhạc" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                                <Tab text="ScanTab">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="root-group">
+                                                         <children>
+                                                            <Label layoutX="809.0" layoutY="-2.0" styleClass="labelFor" text="Số video" />
+                                                            <TextField fx:id="textMaxVideoPerHagTag" layoutX="805.0" layoutY="32.0" prefHeight="35.0" prefWidth="86.0" styleClass="txtInput" />
+                                                            <Label layoutX="113.0" layoutY="-2.0" styleClass="labelFor" text="Số tim" />
+                                                            <TextField fx:id="textMinHeart" layoutX="111.0" layoutY="32.0" prefHeight="35.0" prefWidth="86.0" styleClass="txtInput" />
+                                                            <Label layoutX="212.0" layoutY="-2.0" styleClass="labelFor" text="Thời gian" />
+                                                            <TextField fx:id="textMaxDay" layoutX="210.0" layoutY="32.0" prefHeight="35.0" prefWidth="86.0" promptText="Tuần" styleClass="txtInput" />
+                                                            <Button fx:id="btnRunScanVideo" layoutX="1208.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" styleClass="btnPrimary" text="Quét video" />
+                                                            <Label layoutX="16.0" layoutY="-3.0" styleClass="labelFor" text="Số lượt xem" />
+                                                            <TextField fx:id="textHagTagMinView" layoutX="14.0" layoutY="32.0" prefHeight="35.0" prefWidth="86.0" styleClass="txtInput" />
+                                                            <Label layoutX="313.0" layoutY="-2.0" styleClass="labelFor" text="Trang bắt đầu" />
+                                                            <TextField fx:id="txtCurrentPageScanVideo" layoutX="310.0" layoutY="32.0" prefHeight="35.0" prefWidth="86.0" styleClass="txtInput" />
+                                                            <Label layoutX="413.0" layoutY="-2.0" styleClass="labelFor" text="Nhập từ khóa cần quét " />
+                                                            <TextField fx:id="textListHagTag" layoutX="411.0" layoutY="32.0" prefHeight="35.0" prefWidth="377.0" promptText="Nhập hoặc chọn từ danh sách" styleClass="txtInput" />
+                                                            <Button fx:id="btSelectOldKeyword" contentDisplay="RIGHT" layoutX="719.0" layoutY="35.0" mnemonicParsing="false" prefWidth="66.0" styleClass="btnRadiusSecondarySmall" text="  Chọn">
+                                                               <graphic>
+                                                                  <FontAwesomeIcon fill="#eed7bd" text="" />
+                                                               </graphic>
+                                                            </Button>
+                                                            <Label layoutX="906.0" layoutY="-2.0" styleClass="labelFor" text="Chọn máy chủ : đổi máy chủ nếu không quét được video " />
+                                                            <JFXComboBox fx:id="cbScanServer" layoutX="903.0" layoutY="32.0" prefHeight="25.0" prefWidth="293.0" styleClass="my-checkbox" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                          <HBox fx:id="hboxType" layoutX="13.0" layoutY="97.0" prefHeight="40.0" prefWidth="740.0" styleClass="hboxChip" />
+                                          <AnchorPane fx:id="apSelectKeyword" layoutX="10.0" layoutY="85.0" prefHeight="584.0" prefWidth="1313.0" styleClass="paneDialog" visible="false">
+                                             <children>
+                                                <Label fx:id="lb2" layoutX="1060.0" layoutY="7.0" prefHeight="47.0" prefWidth="253.0" styleClass="btnLink" text="Chọn 1 từ khóa để quét video" />
+                                                <Button fx:id="btCloseSelectKeyword" layoutX="6.0" layoutY="6.0" minWidth="30.0" mnemonicParsing="false" prefHeight="26.0" styleClass="btnCircle">
+                                                   <graphic>
+                                                      <FontAwesomeIcon fill="#e48447" size="1.5em" text="" />
+                                                   </graphic>
+                                                </Button>
+                                                <TableView fx:id="tvSelectKeyword" layoutX="9.0" layoutY="64.0" prefHeight="513.0" prefWidth="1299.0" styleClass="table-view-material" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="apTiktokVideoProgress" prefHeight="674.0" prefWidth="1334.0" styleClass="root" visible="false">
+                                             <children>
+                                                <TableView fx:id="tvTiktokVideoProgress" layoutX="16.0" layoutY="68.0" prefHeight="555.0" prefWidth="1299.0" styleClass="table-view-material" />
+                                                <Label fx:id="lbVideoProgress" layoutX="19.0" layoutY="14.0" prefHeight="35.0" prefWidth="1294.0" styleClass="labelFor" text="..." />
+                                                <Button fx:id="btCancelVideoProgress" contentDisplay="RIGHT" layoutX="16.0" layoutY="635.0" mnemonicParsing="false" prefWidth="222.0" styleClass="btnRadiusSecondary" text="Ngừng tiến trình" />
+                                             </children>
+                                          </AnchorPane>
+                                          <JFXSpinner fx:id="jfxSpinnerLoadvideo" layoutX="13.0" layoutY="366.0" prefHeight="70.0" prefWidth="1308.0" visible="false" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Nhạc">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lb1" layoutX="1150.0" prefHeight="47.0" prefWidth="217.0" styleClass="btnLink" text="Danh sách bài hát" />
+                                          <TableView fx:id="tvMusic" layoutX="14.0" layoutY="92.0" prefHeight="596.0" prefWidth="1345.0" styleClass="table-view-material" />
+                                          <TextField fx:id="txtSearchMusicTitle" layoutX="965.0" layoutY="56.0" prefHeight="35.0" prefWidth="359.0" promptText="Tìm kiếm bài hát ..." style="-fx-alignment: CENTER_RIGHT;" styleClass="txtSetting" />
+                                          <TextField fx:id="txtFindMusicFromCode" layoutX="14.0" layoutY="47.0" prefHeight="35.0" prefWidth="223.0" promptText="Tìm kiếm bài hát bằng code video  ..." style="-fx-alignment: CENTER_RIGHT;" styleClass="txtSetting" />
+                                          <Button fx:id="btFindMusicFromCode" layoutX="253.0" layoutY="50.0" mnemonicParsing="false" prefWidth="67.0" styleClass="btnRadius" text="Tìm">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="#eed7bd" size="1.2em" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <JFXSpinner fx:id="jfxSpinnerLoadMusic" layoutX="661.0" layoutY="320.0" visible="false" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Test Bản Quyền">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lb11" layoutX="1087.0" prefHeight="49.0" prefWidth="279.0" styleClass="btnLink" text="Cài đặt test bản quyền tự động" />
+                                          <TableView fx:id="tvTestVideo" layoutX="420.0" layoutY="115.0" prefHeight="571.0" prefWidth="939.0" styleClass="table-view-material" />
+                                          <TableView fx:id="tvAccountChecking" layoutX="8.0" layoutY="116.0" prefHeight="570.0" prefWidth="398.0" styleClass="table-view-material" />
+                                          <TextField fx:id="txtUploadAccountFolder" layoutX="10.0" layoutY="68.0" prefHeight="25.0" prefWidth="395.0" promptText="Nhấp đúp chọn thư mục chứa profile " styleClass="txtInput" />
+                                          <TextField fx:id="txtFirefoxFile" layoutX="420.0" layoutY="68.0" prefHeight="25.0" prefWidth="395.0" promptText="Nhấp đúp chọn filefox.exe" styleClass="txtInput" />
+                                          <JFXComboBox fx:id="cbThreads" layoutX="833.0" layoutY="71.0" prefHeight="25.0" prefWidth="223.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Chủ đề">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lb111" layoutX="1111.0" prefHeight="49.0" prefWidth="255.0" styleClass="btnLink" text="Danh sách chủ đề" />
+                                          <TableView fx:id="tvKeyword" layoutX="445.0" layoutY="103.0" prefHeight="585.0" prefWidth="914.0" styleClass="table-view-material" />
+                                          <TableView fx:id="tvTopic" layoutX="14.0" layoutY="103.0" prefHeight="542.0" prefWidth="419.0" styleClass="table-view-material" />
+                                          <JFXToggleButton fx:id="togBScanHagTagWithDevice" layoutX="885.0" layoutY="43.0" styleClass="my-checkbox" text="Lấy keyword bằng thiết bị " />
+                                          <Label layoutX="14.0" layoutY="57.0" styleClass="labelFor" text="Tên chủ đề" />
+                                          <TextField fx:id="txtTopicName" layoutX="86.0" layoutY="58.0" prefHeight="25.0" prefWidth="347.0" promptText="Tên chủ đề ..." styleClass="txtInput" />
+                                          <Label layoutX="445.0" layoutY="54.0" styleClass="labelFor" text="Lượt xem tối thiểu *1000" />
+                                          <TextField fx:id="txtKeywordMinview" layoutX="584.0" layoutY="57.0" prefHeight="25.0" prefWidth="166.0" promptText="Lượng xem tối thiểu mỗi từ khóa" styleClass="txtInput" />
+                                          <Label layoutX="759.0" layoutY="54.0" styleClass="labelFor" text="Số lượng" />
+                                          <TextField fx:id="textMaxSearch" layoutX="812.0" layoutY="57.0" prefHeight="25.0" prefWidth="75.0" promptText=".." styleClass="txtInput" />
+                                          <Label layoutX="17.0" layoutY="656.0" styleClass="labelFor" text="Chọn 1 chủ để để tiếp tục scan hagtag cho chủ đề" />
+                                          <Label fx:id="lbLocalIP" layoutX="288.0" layoutY="655.0" prefHeight="35.0" prefWidth="145.0" style="-fx-alignment: CENTER_RIGHT;" styleClass="labelFor" text=".." />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Xuất Video">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lb3" layoutX="1126.0" prefHeight="47.0" prefWidth="241.0" styleClass="btnLink" text="Xuất video" />
+                                          <TableView fx:id="tvVideoProduct" layoutX="483.0" layoutY="66.0" prefHeight="622.0" prefWidth="871.0" styleClass="table-view-material" />
+                                          <VBox layoutX="14.0" layoutY="66.0" prefHeight="592.0" prefWidth="446.0">
+                                             <children>
+                                                <Label styleClass="labelFor" text="Thư mục chứa nhạc chèn" />
+                                                <TextField fx:id="textMusicJoin" prefHeight="25.0" prefWidth="453.0" promptText="Nhấp đúp chọn thư mục" styleClass="txtInput" />
+                                                <Label styleClass="labelFor" text="Nhập các mốc thời gian chèn " />
+                                                <TextField fx:id="textMusicTimeJoin" prefHeight="25.0" prefWidth="453.0" promptText="t1,t2,t3" styleClass="txtInput" />
+                                                <Label styleClass="labelFor" text="Thư mục chứa logo chèn" />
+                                                <TextField fx:id="textLogoFolder" prefHeight="25.0" prefWidth="453.0" promptText="Nhấp đúp chọn thư mục" styleClass="txtInput" />
+                                                <Label styleClass="labelFor" text="Thư mục lưu video " />
+                                                <TextField fx:id="textVideoProductFolder" prefHeight="25.0" prefWidth="453.0" promptText="Nhấp đúp chọn thư mục" styleClass="txtInput" />
+                                                <Label styleClass="labelFor" text="Thời gian tối thiểu mỗi video" />
+                                                <TextField fx:id="textMinDurationProduct" prefHeight="25.0" prefWidth="453.0" promptText="Phút" styleClass="txtInput" />
+                                                <Label prefHeight="35.0" prefWidth="448.0" styleClass="labelFor" text="---------------------------------------------------------------------------------------------------------------------------------" />
+                                                <JFXButton fx:id="btInitProductVideo" contentDisplay="RIGHT" prefWidth="446.0" styleClass="btnRadius" text="Tạo video" />
+                                             </children>
+                                          </VBox>
+                                          <Button fx:id="btLoadProductData" layoutX="430.0" layoutY="32.0" minWidth="30.0" mnemonicParsing="false" prefHeight="26.0" styleClass="btnCircle">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="#e48447" size="1.5em" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="483.0" layoutY="24.0" styleClass="labelFor" text="Số luồng render" />
+                                          <JFXComboBox fx:id="cbNumberThreadRender" layoutX="578.0" layoutY="29.0" prefHeight="25.0" prefWidth="214.0" />
+                                          <Label layoutX="14.0" layoutY="15.0" styleClass="labelFor" text="Bạn đã chọn :" />
+                                          <Label fx:id="lbCountVideos" layoutX="96.0" layoutY="15.0" prefHeight="35.0" prefWidth="190.0" styleClass="labelFor" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Render Nối">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lb31" layoutX="1126.0" prefHeight="47.0" prefWidth="241.0" styleClass="btnLink" text="Render nối video" />
+                                          <TableView fx:id="tvCustomRender" layoutX="483.0" layoutY="66.0" prefHeight="622.0" prefWidth="871.0" styleClass="table-view-material" />
+                                          <VBox layoutX="14.0" layoutY="66.0" prefHeight="592.0" prefWidth="446.0">
+                                             <children>
+                                                <Label styleClass="labelFor" text="Thư mục chứa video nền" />
+                                                <TextField fx:id="txtCustomRenderVideoBackground" prefHeight="25.0" prefWidth="453.0" promptText="Nhấp đúp chọn thư mục" styleClass="txtInput" />
+                                                <Label styleClass="labelFor" text="Thư mục lưu video " />
+                                                <TextField fx:id="txtCustomRenderVideoSave" prefHeight="25.0" prefWidth="453.0" promptText="Nhấp đúp chọn thư mục" styleClass="txtInput" />
+                                                <Label styleClass="labelFor" text="Thời gian tối thiểu mỗi video" />
+                                                <TextField fx:id="txtCustomRenderVideoMinTime" prefHeight="25.0" prefWidth="453.0" promptText="Phút" styleClass="txtInput" />
+                                                <Label prefHeight="35.0" prefWidth="448.0" styleClass="labelFor" text="---------------------------------------------------------------------------------------------------------------------------------" />
+                                                <JFXButton fx:id="btnRenderCustomVideo" contentDisplay="RIGHT" prefWidth="448.0" styleClass="btnRadius" text="Render ngay" />
+                                             </children>
+                                          </VBox>
+                                          <Button fx:id="btLoadProductData1" layoutX="430.0" layoutY="32.0" minWidth="30.0" mnemonicParsing="false" prefHeight="26.0" styleClass="btnCircle">
+                                             <graphic>
+                                                <FontAwesomeIcon fill="#e48447" size="1.5em" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="483.0" layoutY="24.0" styleClass="labelFor" text="Số luồng render" />
+                                          <JFXComboBox fx:id="chCustomRenderThread" layoutX="578.0" layoutY="29.0" prefHeight="25.0" prefWidth="214.0" />
+                                          <Label layoutX="14.0" layoutY="15.0" styleClass="labelFor" text="Bạn đã chọn :" />
+                                          <Label fx:id="lbCountVideos1" layoutX="96.0" layoutY="15.0" prefHeight="35.0" prefWidth="190.0" styleClass="labelFor" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Tạo Nhạc">
+                                 <content>
+                                    <AnchorPane fx:id="apMakeMusicVideo" minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="1313.0">
+                                       <children>
+                                          <TableView fx:id="tvVideoSetupProgress" layoutX="15.0" layoutY="16.0" prefHeight="633.0" prefWidth="1272.0" styleClass="table-view-material" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <AnchorPane fx:id="apSetting" layoutX="904.0" prefHeight="674.0" prefWidth="427.0" styleClass="paneDialog" visible="false">
+                           <children>
+                              <Label layoutX="4.0" layoutY="2.0" prefHeight="45.0" prefWidth="419.0" styleClass="labelDialogHeader" text="CÀI ĐẶT TOOL" />
+                              <ScrollPane hbarPolicy="NEVER" layoutY="58.0" prefHeight="562.0" prefWidth="427.0" styleClass="root">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="415.0" styleClass="root">
+                                       <children>
+                                          <VBox prefHeight="800.0" prefWidth="411.0" styleClass="vboxDialog">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Tên modem adapter" />
+                                                <TextField fx:id="txtModemAdapterName" styleClass="txtSetting" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Tên mobile shared adapter" />
+                                                <TextField fx:id="txtPhoneAdapterName" styleClass="txtSetting" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Thời gian mở firefox tối đa" />
+                                                <TextField fx:id="txtOpenBrowserTimeout" styleClass="txtSetting" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Simthue | rentcode key api" />
+                                                <TextField fx:id="txtPhoneKeyApi" styleClass="txtSetting" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Danh sách TMProxy key" />
+                                                <TextArea fx:id="txtTMApiKey" prefHeight="100.0" prefWidth="379.0" styleClass="txtArea" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Thời gian đổi ip tối đa" />
+                                                <TextField fx:id="txtChangeIpTimeout" styleClass="txtSetting" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Đường dẫn firefox.exe" />
+                                                <TextField fx:id="txtFirefoxPathSetting" styleClass="txtSetting" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Tọa độ nút máy bay " />
+                                                <TextField fx:id="txtPlaneModeButtonLocation" styleClass="txtSetting" />
+                                                <Label prefHeight="17.0" prefWidth="394.0" styleClass="labelFor" text="Thời gian tải trang tối đa" />
+                                                <TextField fx:id="txtLoadPageTimeout" styleClass="txtSetting" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                              <ButtonBar layoutX="4.0" layoutY="630.0" prefHeight="30.0" prefWidth="419.0">
+                                <buttons>
+                                  <Button fx:id="btnSaveSetting" mnemonicParsing="false" styleClass="btnPrimary" text="Lưu" />
+                                </buttons>
+                              </ButtonBar>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane layoutY="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="1372.0" styleClass="paneNavTopBar">
+                     <children>
+                        <ButtonBar fx:id="btnGroupTopic" buttonMinWidth="110.0" layoutX="580.0" layoutY="4.0" prefHeight="40.0" prefWidth="357.0" visible="false">
+                           <buttons>
+                              <Button fx:id="btScanKeyWord" mnemonicParsing="false" prefWidth="105.0" styleClass="btnRadiusSecondary" text="  Scan chủ đề">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#eed7bd" size="1.3em" text="" wrappingWidth="13.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btRemoveHagTagScan" mnemonicParsing="false" styleClass="btnRadiusSecondary" text="   Xóa chủ đề">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#eed7bd" size="1.3em" text="" wrappingWidth="13.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btReconnectDevice" mnemonicParsing="false" styleClass="btnRadiusSecondary" text="  Kết nối device">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#eed7bd" size="1.3em" text="" wrappingWidth="13.0" />
+                                 </graphic>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
+                        <ButtonBar fx:id="btnBarTestVideoView" buttonMinWidth="120.0" layoutX="580.0" layoutY="5.0" prefHeight="40.0" prefWidth="640.0" visible="false">
+                           <buttons>
+                              <Button fx:id="btRenderVideoTest" mnemonicParsing="false" styleClass="btnRadiusSecondary" text="Chạy test" />
+                              <Button fx:id="btUpdateFreeMusicTest" mnemonicParsing="false" styleClass="btnRadiusSecondary" text="Đánh dấu free" />
+                              <Button fx:id="btUpdateLisenceMusicTest" mnemonicParsing="false" styleClass="btnRadiusSecondary" text="Đánh dấu license" />
+                              <Button fx:id="btClearVideoForChannelTest" mnemonicParsing="false" styleClass="btnRadiusSecondary" text="Làm sạch kênh" />
+                              <Button fx:id="btRemoveListVideoTest" mnemonicParsing="false" styleClass="btnRadiusSecondary" text="Xóa dữ liệu test" />
+                           </buttons>
+                        </ButtonBar>
+                        <ButtonBar fx:id="btGroupExportVideo" buttonMinWidth="100.0" layoutX="580.0" layoutY="4.0" prefHeight="40.0" prefWidth="200.0" visible="false">
+                          <buttons>
+                              <Button fx:id="btRemoveVideoProduct" mnemonicParsing="false" styleClass="btnRadiusSecondary" text=" Xóa video">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#eed7bd" size="1.2em" text="" />
+                                 </graphic>
+                              </Button>
+                            <Button fx:id="btMakeVideo" mnemonicParsing="false" styleClass="btnRadiusSecondary" text=" Xuất Video">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#eed7bd" size="1.2em" text="" />
+                                 </graphic>
+                              </Button>
+                          </buttons>
+                        </ButtonBar>
+                        <HBox fx:id="paneNavTopBar" alignment="CENTER_LEFT" layoutX="1072.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="300.0" styleClass="paneNavTopBar" />
+                        <Label fx:id="lbCurrentProxy" layoutX="129.0" layoutY="22.0" prefHeight="17.0" prefWidth="155.0" styleClass="lbBreadScrumbDes" text="..." />
+                        <Label fx:id="lbCountStoreScan" layoutX="65.0" layoutY="22.0" prefHeight="17.0" prefWidth="60.0" styleClass="lbBreadScrumbDes" text="..." />
+                        <Label fx:id="lbLoadStoreMessage" layoutX="293.0" layoutY="22.0" prefHeight="17.0" prefWidth="419.0" styleClass="lbBreadScrumbDes" text="..." />
+                     </children>
+                     <effect>
+                        <DropShadow color="#dfe4ea" height="26.81" offsetY="3.0" radius="6.2025" spread="0.07" width="0.0" />
+                     </effect>
+                  </AnchorPane>
+                  <VBox fx:id="vboxLeftNavBar" layoutY="58.0" prefHeight="710.0" prefWidth="60.0" styleClass="paneNavLeftBar" />
+                  <Label fx:id="lbBreadscrumbDescription" layoutX="80.0" layoutY="103.0" prefHeight="17.0" prefWidth="567.0" styleClass="lbBreadScrumbDes" text="BreadScrumb description" />
+                  <HBox fx:id="vboxChildButtonGroup" alignment="CENTER_RIGHT" layoutX="400.0" layoutY="71.0" prefHeight="50.0" prefWidth="947.0" styleClass="hboxChildMenu" />
+                  <Label fx:id="lbBreadscrumbTitle" layoutX="80.0" layoutY="68.0" prefHeight="23.0" prefWidth="361.0" styleClass="lbBreadScrumb" text="BreadScrumb title" />
+                  <JFXProgressBar fx:id="pbLoading" layoutX="60.0" layoutY="58.0" prefHeight="1.0" prefWidth="1313.0" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="apLoadDataMusic" prefHeight="768.0" prefWidth="1366.0" styleClass="dialog-bg" visible="false">
+               <children>
+                  <JFXSpinner layoutX="683.0" layoutY="334.0" />
+                  <Label layoutX="648.0" layoutY="410.0" prefHeight="35.0" prefWidth="120.0" styleClass="labelFor" text="Đang tải dữ liệu nhạc " />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apHelperContainer" prefHeight="768.0" prefWidth="1366.0" styleClass="dialog-bg" visible="false">
+         <children>
+            <ImageView fx:id="ivHelper" fitHeight="683.0" fitWidth="1334.0" layoutX="15.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXCheckBox fx:id="chSaveHelper" layoutX="14.0" layoutY="18.0" styleClass="my-checkbox" text="Không xuất hiện lại hướng dẫn này" />
+            <Button fx:id="btCloseHelper" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" prefWidth="110.0" styleClass="btnRadius" text="Đóng hướng dẫn" />
+            <JFXSpinner fx:id="spHelperLoading" layoutX="682.0" layoutY="334.0" />
+            <Button fx:id="btYoutubeHelp" layoutX="363.0" layoutY="14.0" mnemonicParsing="false" prefWidth="174.0" styleClass="btnRadius" text="Xem video  hướng dẫn youtube" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dialogPane" layoutY="-1.0" prefHeight="770.0" prefWidth="1372.0" styleClass="dialog-bg" visible="false" />
+      <AnchorPane fx:id="messagePane" layoutX="242.0" prefHeight="60.0" prefWidth="900.0" visible="false" />
+      <AnchorPane fx:id="pnToolTip" layoutX="59.0" layoutY="50.0" prefHeight="17.0" prefWidth="1313.0" styleClass="paneMessageError" visible="false">
+         <effect>
+            <DropShadow color="#f1f2f6" height="5.94" offsetY="3.0" radius="0.9850000000000001" spread="0.21" width="0.0" />
+         </effect>
+         <children>
+            <Button layoutX="4.0" layoutY="2.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIcon fill="#a4b0be" size="1.5em" text="" />
+               </graphic>
+            </Button>
+            <Label fx:id="lbToolTip" layoutX="33.0" layoutY="7.0" prefHeight="17.0" prefWidth="1187.0" styleClass="labelMessageTitle" text="..." />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apProgress" prefHeight="30.0" prefWidth="1372.0" styleClass="paneMessageError" visible="false">
+         <children>
+            <Label fx:id="lbProgress" layoutX="649.0" layoutY="-2.0" prefHeight="30.0" prefWidth="721.0" styleClass="labelMessage" text="Label" />
+            <Label fx:id="lbTitleMesssage" prefHeight="30.0" prefWidth="660.0" styleClass="labelMessageTitle" text="..." />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

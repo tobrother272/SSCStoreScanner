@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="796.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ssc.reup.api.Controller.SetupController">
+   <stylesheets>
+      <URL value="@../styles/Styles.css" />
+      <URL value="@../../../../assets/Styles.css" />
+   </stylesheets>
+   <children>
+      <StackPane fx:id="spContent" prefHeight="377.0" prefWidth="796.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+               <children>
+                  <AnchorPane layoutX="18.0" layoutY="28.0" prefHeight="323.0" prefWidth="760.0" styleClass="content-panel">
+                     <children>
+                        <Button fx:id="btAppium" layoutX="170.0" layoutY="26.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="44.0">
+                           <styleClass>
+                              <String fx:value="icon-medium" />
+                              <String fx:value="icon-unready" />
+                           </styleClass>
+                        </Button>
+                        <Label fx:id="lbSetupMessage" layoutX="136.0" layoutY="283.0" prefHeight="17.0" prefWidth="511.0" text="..." textFill="WHITE" />
+                        <Button fx:id="btSetup" layoutX="11.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" styleClass="button-primary" text="Set up" />
+                        <Button fx:id="btExit" layoutX="635.0" layoutY="279.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" styleClass="button-warning" text="Thoát" />
+                        <Button fx:id="btNodeJS" layoutX="270.0" layoutY="26.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="44.0">
+                           <styleClass>
+                              <String fx:value="icon-medium" />
+                              <String fx:value="icon-unready" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btJDK" layoutX="370.0" layoutY="26.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="44.0">
+                           <styleClass>
+                              <String fx:value="icon-medium" />
+                              <String fx:value="icon-unready" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btSDK" layoutX="470.0" layoutY="26.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="44.0">
+                           <styleClass>
+                              <String fx:value="icon-medium" />
+                              <String fx:value="icon-unready" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btKOPlayer" layoutX="570.0" layoutY="26.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="44.0">
+                           <styleClass>
+                              <String fx:value="icon-medium" />
+                              <String fx:value="icon-unready" />
+                           </styleClass>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="151.0" layoutY="78.0" prefHeight="17.0" prefWidth="82.0" text="Appium" textFill="WHITE" />
+                        <Label alignment="CENTER" layoutX="251.0" layoutY="78.0" prefHeight="17.0" prefWidth="82.0" text="Nodejs" textFill="WHITE" />
+                        <Label alignment="CENTER" layoutX="351.0" layoutY="78.0" prefHeight="17.0" prefWidth="82.0" text="JDK" textFill="WHITE" />
+                        <Label alignment="CENTER" layoutX="451.0" layoutY="78.0" prefHeight="17.0" prefWidth="82.0" text="SDK" textFill="WHITE" />
+                        <Label alignment="CENTER" layoutX="551.0" layoutY="78.0" prefHeight="17.0" prefWidth="82.0" text="Koplayer" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children></StackPane>
+   </children>
+</AnchorPane>
