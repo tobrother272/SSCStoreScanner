@@ -57,7 +57,7 @@ public class ScanStoreTask extends Task<Boolean> {
                     }
                     updateMessage("["+countLoad+"/500]Đang load trang " + page);
                     //https://www.foody.vn/ho-chi-minh/dia-diem?ds=Restaurant&vt=row&st=1&q=cafe&page=4&provinceId=217&categoryId=&append=true
-                    driver.get("https://www.foody.vn/ho-chi-minh/" + category + "/dia-diem?ds=Restaurant&vt=row&st=1&q="+q+"&page=" + page + "&provinceId=" + (City.indexOf(city) + 217) + "&categoryId=&append=true");
+                    driver.get("https://www.foody.vn/"+city+"/" + category + "/dia-diem?ds=Restaurant&vt=row&st=1&q="+q+"&page=" + page + "&provinceId=" + (City.indexOf(city) + 217) + "&categoryId=&append=true");
                     SeleniumJSUtils.waitForPageLoad(driver, 30);
                     countLoad++;
                     int length = SeleniumJSUtils.getLengthJS("//div[contains(@id,'result-box')]//div[contains(@class,'row-item')]", driver);
